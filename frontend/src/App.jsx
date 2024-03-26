@@ -6,6 +6,7 @@ import Blog from "./pages/blog/Blog";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+
 function App() {
   return (
     <BrowserRouter>
