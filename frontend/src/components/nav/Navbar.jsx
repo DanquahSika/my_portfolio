@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/bechlogo.png";
-import hamburgerIcon from "../../assets/images/hamburger.svg";
+import hamburgerIcon from "../../assets/images/hamburgercolored.svg";
 const Navbar = () => {
   let Links = [
     { name: "About", link: "#about" },
