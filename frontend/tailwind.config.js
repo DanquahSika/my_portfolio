@@ -6,11 +6,18 @@ export default {
   ],
   theme: {
     colours:{
-        'peach': '#edc7b7',
-        'cream': '#eee2dc',
-        'gray': '#bab2b5',
-       ' blue': '#123c69',
-        'pink': '#ac3b61',
+        peach: {
+        light: '#edc7b7',
+        default: '#eee2dc',
+        },
+        grey: {
+          default:'#bab2b5'},
+        
+        blue: {
+          default:'#123c69'},
+
+        pink:
+       {default: '#ac3b61'},
     },
     extend: {},
   },
