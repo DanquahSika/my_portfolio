@@ -4,7 +4,7 @@ const Tabs = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mx-auto" style={{ maxWidth: "1000px" }}>
         <div className="w-full">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
@@ -114,7 +114,7 @@ const Tabs = ({ color }) => {
 export default function PortfolioTab() {
   return (
     <>
-      return <Tabs color="pink" />;
+      <Tabs color="pink" />
     </>
   );
 }
