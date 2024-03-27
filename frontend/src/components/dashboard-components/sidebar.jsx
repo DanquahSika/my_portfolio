@@ -1,40 +1,48 @@
-import { FaHome, FaTools, FaMedal, FaBlog, FaPhone, FaChartLine, FaLock } from "react-icons/fa";
 
-export default function Sidebar() {
+import { FaHome, FaUser, FaChartBar, FaAward, FaComment, FaBlog, FaCog } from 'react-icons/fa';
+
+const Sidebar = () => {
     return (
-        <div className="bg-gradient-to-r from-purple-500 to-indigo-500 h-screen w-64 fixed top-0 left-0 flex flex-col justify-between" style={{ marginTop: '96px' }}>
-            <div className="pt-16 px-4">
-                <ul className="space-y-4">
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaHome />
-                        <span>Home</span>
+        <aside className="bg-black text-white h-full w-64 flex flex-col justify-between">
+            <div className="p-4">
+                <ul className="space-y-2">
+                    <li className="flex items-center text-2xl ">
+                        <FaHome className="mr-2" />
+                        Dashboard
                     </li>
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaTools />
-                        <span>Skills</span>
+                    <li className="flex items-center ">
+                        <FaUser className="mr-2" />
+                        Profile
                     </li>
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaMedal />
-                        <span>Achievements</span>
+                    <li className="flex items-center">
+                        <FaChartBar className="mr-2" />
+                        Skills
                     </li>
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaBlog />
-                        <span>Blog</span>
+                    <li className="flex items-center">
+                        <FaAward className="mr-2" />
+                        Achievement
                     </li>
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaPhone />
-                        <span>Contact</span>
+                    <li className="flex items-center">
+                        <FaComment className="mr-2" />
+                        Messages
                     </li>
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaChartLine />
-                        <span>Analytics</span>
+                    <li className="flex items-center">
+                        <FaBlog className="mr-2" />
+                        Blog
                     </li>
-                    <li className="flex items-center space-x-2 text-white text-lg cursor-pointer">
-                        <FaLock />
-                        <span>Loginizer security</span>
+                    <li className="flex items-center">
+                        <FaCog className="mr-2" />
+                        Setting
                     </li>
                 </ul>
             </div>
-        </div>
+            <div className="p-4">
+                <ul className="space-y-2">
+                
+                </ul>
+            </div>
+        </aside>
     );
-}
+};
+
+export default Sidebar;
