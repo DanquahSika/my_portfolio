@@ -4,7 +4,7 @@ import { ProjectsProvider } from '../../components/projects/ProjectsContext';
 const Projects = () => {
 	return (
 		<ProjectsProvider>
-			<div className="container mx-auto">
+			<div className="container mx-auto bg-blue">
 				<ProjectsGrid />
 			</div>
 		</ProjectsProvider>
