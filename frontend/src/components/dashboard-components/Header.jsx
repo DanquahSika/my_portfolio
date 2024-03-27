@@ -2,8 +2,11 @@
 import { FaSearch, FaBell, FaComment, FaUser } from 'react-icons/fa';
 
 const Header = () => {
+  const scrollToMessages = () => {
+      window.location.href = `#messages`;
+  }
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white shadow-md h-15">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div>
           <label htmlFor="search" className="sr-only">Type to search...</label>
@@ -15,10 +18,11 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center space-x-6">
-          <button className="text-gray-600 focus:outline-none">
+          <button className="text-gray-600 focus:outline-none cursor-pointer hover:text-blue-500"onClick={scrollToMessages}>
             <FaSearch />
           </button>
-          <button className="text-gray-600 focus:outline-none">
+          <button className="text-gray-600 focus:outline-none cursor-pointer hover:text-blue-500"onClick={scrollToMessages}>
+          
             <FaBell />
           </button>
           <button className="text-gray-600 focus:outline-none">

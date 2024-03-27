@@ -40,7 +40,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="mt-8 max-w-5xl mx-auto">
+    <section id='skills' className="mt-8 max-w-5xl mx-auto">
       <h2 className="text-xl font-bold mb-4">My Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skill) => (

@@ -5,6 +5,7 @@ const ExperiencesSection = () => {
   const [experiences, setExperiences] = useState([
     { id: 1, title: 'Software Engineer', description: 'Worked on various web development projects', date: '2020 - Present' },
     { id: 2, title: 'Intern', description: 'Interned at a tech company, gaining experience in software development', date: '2019 - 2020' },
+    { id: 3, title: 'MEST Trainee', description: 'Studied web development at MEST', date: '2024' }
   ]);
   const [newExperienceTitle, setNewExperienceTitle] = useState('');
   const [newExperienceDescription, setNewExperienceDescription] = useState('');
@@ -38,7 +39,7 @@ const ExperiencesSection = () => {
   };
 
   return (
-    <section className="mt-8 max-w-5xl mx-auto">
+    <section id='experiences' className="mt-8 max-w-5xl mx-auto">
       <h2 className="text-xl font-bold mb-4">My Experiences</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {experiences.map((experience) => (
