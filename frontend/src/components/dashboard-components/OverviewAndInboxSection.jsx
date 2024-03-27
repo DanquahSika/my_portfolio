@@ -1,5 +1,6 @@
-import { useState } from 'react';
 
+import { TEChart } from 'tw-elements-react';
+import { useState } from 'react';
 import { FaTrash, FaReply } from 'react-icons/fa';
 
 const OverviewAndInboxSection = () => {
@@ -13,64 +14,17 @@ const OverviewAndInboxSection = () => {
     setMessages(messages.filter((message) => message.id !== id));
   };
 
- 
-
   const handleReply = (id) => {
-    
     console.log(`Replying to message with id: ${id}`);
   };
 
   return (
     <section id='messages' className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
       <div className="col-span-2">
-      <div className="bg-white p-4 border border-gray-200 rounded-lg shadow hover:shadow-lg transition duration-300">
-  <h2 className="text-xl font-bold mb-4">Overview</h2>
-  <div className="flex justify-between items-center mb-4">
-    <div>
-      <p className="text-lg font-semibold">Total Visitors</p>
-      <p className="text-gray-600">1,234</p>
-    </div>
-    <div>
-      <p className="text-lg font-semibold">Unique Visitors</p>
-      <p className="text-gray-600">876</p>
-    </div>
-    <div>
-      <p className="text-lg font-semibold">Page Views</p>
-      <p className="text-gray-600">3,456</p>
-    </div>
-  </div>
-  <div className="flex justify-between items-center mb-4">
-    <div>
-      <p className="text-lg font-semibold">Most Visited Page</p>
-      <p className="text-gray-600">Portfolio Projects</p>
-    </div>
-    <div>
-      <p className="text-lg font-semibold">Average Time on Site</p>
-      <p className="text-gray-600">2 min 30 sec</p>
-    </div>
-    <div>
-      <p className="text-lg font-semibold">Bounce Rate</p>
-      <p className="text-gray-600">30%</p>
-    </div>
-  </div>
-  <div>
-    <p className="text-lg font-semibold">Top Referring Sites</p>
-    <ul className="list-disc list-inside text-gray-600">
-      <li>Google.com</li>
-      <li>LinkedIn.com</li>
-      <li>GitHub.com</li>
-      <li>facebook.com</li>
-    </ul>
-    <p className="text-lg font-semibold">Top Counties</p>
-    <ul className="list-disc list-inside text-gray-600">
-      <li>Ghana</li>
-      <li>Nigeria</li>
-      <li>USA</li>
-      <li>UK</li>
-    </ul>
-  </div>
-</div>
-
+        <div className="bg-white p-4 border border-gray-200 rounded-lg shadow hover:shadow-lg transition duration-300">
+          <h2 className="text-xl font-bold mb-4">Overview</h2>
+          <ChartPie />
+        </div>
       </div>
       <div className="col-span-1">
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow hover:shadow-lg transition duration-300">
@@ -86,7 +40,6 @@ const OverviewAndInboxSection = () => {
                   <p className="text-sm text-gray-600">{message.message}</p>
                 </div>
                 <div className="mt-4 flex items-center">
-                  
                   <button
                     className="text-red-500 mr-2 hover:text-red-700"
                     onClick={() => handleDelete(message.id)}
@@ -106,6 +59,64 @@ const OverviewAndInboxSection = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const ChartPie = () => {
+  return (
+    <div style={{ width: '380px', height: '380px' }}>
+    <TEChart
+      type="pie"
+      data={{
+        labels: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday ',
+        ],
+        datasets: [
+          {
+            label: 'Traffic',
+            data: [2112, 2343, 2545, 3423, 2365, 1985, 987],
+            backgroundColor: [
+              'rgba(63, 81, 181, 0.5)',
+              'rgba(77, 182, 172, 0.5)',
+              'rgba(66, 133, 244, 0.5)',
+              'rgba(156, 39, 176, 0.5)',
+              'rgba(233, 30, 99, 0.5)',
+              'rgba(66, 73, 244, 0.4)',
+              'rgba(66, 133, 244, 0.2)',
+              
+            ],
+          },
+        ],
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: 'Website Traffic',
+            font: {
+              size: 16,
+              weight: 'bold',
+            },
+          },
+          subtitle: {
+            display: true,
+            text: 'Weekly traffic overview',
+            font: {
+              size: 14,
+            },
+          },
+        },
+        responsive: true,
+      }}
+      
+    />
+    </div>
   );
 };
 
