@@ -5,14 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colours:{
-        'peach': '#edc7b7',
-        'cream': '#eee2dc',
-        'gray': '#bab2b5',
-       ' blue': '#123c69',
-        'pink': '#ac3b61',
+    colours:{ 
     },
-    extend: {},
+    extend: {
+      peach: '#edc7b7',
+      cream: '#eee2dc',
+      gray: '#bab2b5',
+     blue: '#123c69',
+      pink: '#ac3b61',
+    },
   },
   plugins: [],
 }
