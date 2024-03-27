@@ -4,12 +4,12 @@ import logo from "../../assets/images/bechlogo.png";
 import hamburgerIcon from "../../assets/images/hamburgercolored.svg";
 const Navbar = () => {
   let Links = [
-    { name: "About", link: "#about" },
-    { name: "Services", link: "#services" },
-    { name: "Contact", link: "#contact" },
-    { name: "Portfolio", link: "#portfolio" },
+    { name: "About", link: "/about" },
+    { name: "Services", link: "/services" },
+    { name: "Contact", link: "/contact" },
+    { name: "Portfolio", link: "/projects" },
     { name: "Blog", link: "/blog" },
-    { name: "Contact", link: "#contact" },
+    { name: "Contact", link: "/contact" },
   ];
   const [open, setIsOpen] = useState(false);
   const toggleMenu = () => {
