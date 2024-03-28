@@ -1,28 +1,70 @@
-import  { useState } from 'react';
-import { FaTrash, FaEdit } from 'react-icons/fa';
+import { useState } from "react";
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 const SkillsSection = () => {
   const [skills, setSkills] = useState([
-    { id: 1, name: 'HTML', description: 'HyperText Markup Language', proficiency: 'Beginner' },
-    { id: 2, name: 'CSS', description: 'Cascading Style Sheets', proficiency: 'Intermediate' },
-    { id: 3, name: 'JavaScript', description: 'JavaScript programming language', proficiency: 'Advanced' },
+    {
+      id: 1,
+      name: "HTML",
+      description: "HyperText Markup Language",
+      proficiency: "Beginner",
+    },
+    {
+      id: 2,
+      name: "CSS",
+      description: "Cascading Style Sheets",
+      proficiency: "Intermediate",
+    },
+    {
+      id: 3,
+      name: "JavaScript",
+      description: "JavaScript programming language",
+      proficiency: "Advanced",
+    },
   ]);
-  const [newSkillName, setNewSkillName] = useState('');
-  const [newSkillDescription, setNewSkillDescription] = useState('');
-  const [newSkillProficiency, setNewSkillProficiency] = useState('Beginner');
+  const [newSkillName, setNewSkillName] = useState("");
+  const [newSkillDescription, setNewSkillDescription] = useState("");
+  const [newSkillProficiency, setNewSkillProficiency] = useState("Beginner");
 
   const handleEdit = (id) => {
     // Handle edit action here
     console.log(`Editing skill with id: ${id}`);
   };
 
-  const handleDelete = (id) => {
-    
+  const handleDelete = async (id) => {
+    try {
+      const query = { _id: new ObjectId(req.params.id) };
+      let result = await BLOGS_COLLECTION.deleteOne(query);
+      res.send(result).status(200);
+    } catch (error) {
+      console.error(error);
+    }
     setSkills(skills.filter((skill) => skill.id !== id));
   };
 
-  const handleAddSkill = () => {
-    if (newSkillName.trim() === '' || newSkillDescription.trim() === '' || newSkillProficiency.trim() === '') {
+  const handleAddSkill = async () => {
+    const baseUrl = import.meta.env.VITE_API_URL;
+
+    try {
+      const response = await fetch(`${baseUrl}/skills`, {
+        method: "POST",
+        body: JSON.stringify({
+          skill: newSkillName,
+          proficiency: newSkillProficiency,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+    if (
+      newSkillName.trim() === "" ||
+      newSkillDescription.trim() === "" ||
+      newSkillProficiency.trim() === ""
+    ) {
       return;
     }
 
@@ -34,13 +76,13 @@ const SkillsSection = () => {
     };
 
     setSkills([...skills, newSkill]);
-    setNewSkillName('');
-    setNewSkillDescription('');
-    setNewSkillProficiency('Beginner');
+    setNewSkillName("");
+    setNewSkillDescription("");
+    setNewSkillProficiency("Beginner");
   };
 
   return (
-    <section id='skills' className="mt-8 max-w-5xl mx-auto">
+    <section id="skills" className="mt-8 max-w-5xl mx-auto">
       <h2 className="text-xl font-bold mb-4">My Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {skills.map((skill) => (
@@ -49,9 +91,16 @@ const SkillsSection = () => {
             className="bg-white p-4 border border-gray-200 rounded-lg flex flex-col items-start justify-between shadow hover:shadow-lg transition duration-300"
           >
             <div>
-              <h3 className="text-lg font-semibold">{skill.name}</h3>
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                {skill.name}
+              </h3>
               <p className="text-sm text-gray-600">{skill.description}</p>
-              <p className="text-sm text-gray-600">Proficiency: {skill.proficiency}</p>
+              <p className="text-sm text-gray-600">
+                Proficiency: {skill.proficiency}
+              </p>
             </div>
             <div className="mt-4 flex items-center">
               <button
@@ -75,7 +124,7 @@ const SkillsSection = () => {
             placeholder="Skill Name"
             value={newSkillName}
             onChange={(e) => setNewSkillName(e.target.value)}
-            className="border border-gray-300 p-2 mb-2 w-full"
+            className="border border-gray-300 p-2 mb-2 w-full text-black"
           />
           <input
             type="text"
