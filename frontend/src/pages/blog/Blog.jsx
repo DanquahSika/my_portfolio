@@ -1,11 +1,13 @@
 import React from "react";
-import svgback from "../../assets/images/svgback.svg"
-import featured from "../../assets/images/featured.jpg"
+import svgback from "../../assets/images/svgback.svg";
+import featured from "../../assets/images/featured.jpg";
 import { Link } from "react-router-dom";
-import blogimage from "../../assets/images/blogimg1.jpg"
+import blogimage from "../../assets/images/blogimg1.jpg";
 const Blog = () => {
   return (
-    <div className="background relative h-full">      <div className="featured-blog relative">
+    <div className="background relative h-full">
+      {" "}
+      <div className="featured-blog relative">
         <div className="image-blog">
           <img src={featured} alt="" />
         </div>
@@ -35,8 +37,11 @@ const Blog = () => {
             modi fuga, nihil architecto cumque dignissimos quisquam deserunt
             assumenda aliquid magnam.
           </div>
+
           <button className="rounded border-white border-2 p-2 hover:bg-white  hover:text-violet-900">
-            Read more
+            <Link to="https://medium.com/javascript-scene/learn-javascript-b631a4af11f2">
+              Read More
+            </Link>
           </button>
         </div>
         <div className="blog-example w-96 mx-3">
@@ -53,7 +58,9 @@ const Blog = () => {
             assumenda aliquid magnam.
           </div>
           <button className="rounded border-white border-2 p-2 hover:bg-white hover:text-violet-900">
-            Read more
+            <Link to="https://medium.com/javascript-scene/learn-javascript-b631a4af11f2">
+              Read More
+            </Link>
           </button>
         </div>
         <div className="blog-example w-96 mx-3">
@@ -70,7 +77,9 @@ const Blog = () => {
             assumenda aliquid magnam.
           </div>
           <button className="rounded border-white border-2 p-2 hover:bg-white  hover:text-violet-900">
-            Read more
+            <Link to="https://medium.com/javascript-scene/learn-javascript-b631a4af11f2">
+              Read More
+            </Link>
           </button>
         </div>
       </div>
