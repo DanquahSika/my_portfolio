@@ -1,5 +1,3 @@
-
-
 const Blog = () => {
   return (
     <div className="background relative h-full">
