@@ -1,7 +1,7 @@
 import React from "react";
 // import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { FiArrowDownCircle } from "react-icons/fi";
-import developerLight from "../../assets/images/developer-dark.svg";
+import developerLight from "../../assets/images/developer.jpg";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -70,7 +70,7 @@ const Hero = () => {
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
       >
-        <img className src={developerLight} alt="Developer" />
+        <img className="rounded-full" src={developerLight} alt="Developer" />
       </motion.div>
     </motion.section>
   );
