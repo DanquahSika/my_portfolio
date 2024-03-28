@@ -31,7 +31,7 @@ const AnimateIn = ({
 
   useEffect(() => {
     if (prefersReducedMotion) {
-      // If the user prefers reduced motion, skip the animation
+      // If the user prefers reduced motion, skip 
       setAnimate(to);
       return;
     }
