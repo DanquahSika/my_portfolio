@@ -12,6 +12,7 @@ import ServicesTab from "../../components/services-section/ServicesTab";
 
 import BlogTab from "../../components/blog-section/BlogTab";
 import Footer from "../../components/footer/Footer";
+import Sfooter from "../../components/footer/SeconFooter";
 
 const Home = () => {
   return (
@@ -35,7 +36,7 @@ const Home = () => {
       <ServicesTab />
       <Counter />
 
-      <Footer />
+      <Sfooter/>
     </div>
   );
 };
