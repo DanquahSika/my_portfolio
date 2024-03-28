@@ -1,14 +1,27 @@
-import  { useState } from 'react';
-import { FaTrash, FaEdit } from 'react-icons/fa';
+import { useState } from "react";
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 const BlogSection = () => {
   const [posts, setPosts] = useState([
-    { id: 1, title: 'First Blog Post', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { id: 2, title: 'Second Blog Post', content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.' },
-    { id: 3, title: 'Third Blog Post', content: 'Integer eget odio sed ipsum finibus consequat.' },
+    {
+      id: 1,
+      title: "First Blog Post",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 2,
+      title: "Second Blog Post",
+      content:
+        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    },
+    {
+      id: 3,
+      title: "Third Blog Post",
+      content: "Integer eget odio sed ipsum finibus consequat.",
+    },
   ]);
-  const [newPostTitle, setNewPostTitle] = useState('');
-  const [newPostContent, setNewPostContent] = useState('');
+  const [newPostTitle, setNewPostTitle] = useState("");
+  const [newPostContent, setNewPostContent] = useState("");
 
   const handleEdit = (id) => {
     // Handle edit action here
@@ -20,7 +33,7 @@ const BlogSection = () => {
   };
 
   const handleAddPost = () => {
-    if (newPostTitle.trim() === '' || newPostContent.trim() === '') {
+    if (newPostTitle.trim() === "" || newPostContent.trim() === "") {
       return;
     }
 
@@ -31,8 +44,8 @@ const BlogSection = () => {
     };
 
     setPosts([...posts, newPost]);
-    setNewPostTitle('');
-    setNewPostContent('');
+    setNewPostTitle("");
+    setNewPostContent("");
   };
 
   return (
@@ -45,7 +58,12 @@ const BlogSection = () => {
             className="bg-white p-4 border border-gray-200 rounded-lg flex flex-col items-start justify-between shadow hover:shadow-lg transition duration-300"
           >
             <div>
-              <h3 className="text-lg font-semibold">{post.title}</h3>
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                {post.title}
+              </h3>
               <p className="text-sm text-gray-600">{post.content}</p>
             </div>
             <div className="mt-4 flex items-center">
@@ -64,7 +82,10 @@ const BlogSection = () => {
             </div>
           </div>
         ))}
-        <div id='blog' className="bg-white p-4 border border-gray-200 rounded-lg flex flex-col items-start justify-between shadow hover:shadow-lg transition duration-300">
+        <div
+          id="blog"
+          className="bg-white p-4 border border-gray-200 rounded-lg flex flex-col items-start justify-between shadow hover:shadow-lg transition duration-300"
+        >
           <input
             type="text"
             placeholder="Post Title"

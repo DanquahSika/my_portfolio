@@ -1,15 +1,31 @@
-import  { useState } from 'react';
-import { FaTrash, FaEdit } from 'react-icons/fa';
+import { useState } from "react";
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 const ExperiencesSection = () => {
   const [experiences, setExperiences] = useState([
-    { id: 1, title: 'Software Engineer', description: 'Worked on various web development projects', date: '2020 - Present' },
-    { id: 2, title: 'Intern', description: 'Interned at a tech company, gaining experience in software development', date: '2019 - 2020' },
-    { id: 3, title: 'MEST Trainee', description: 'Studied web development at MEST', date: '2024' }
+    {
+      id: 1,
+      title: "Software Engineer",
+      description: "Worked on various web development projects",
+      date: "2020 - Present",
+    },
+    {
+      id: 2,
+      title: "Intern",
+      description:
+        "Interned at a tech company, gaining experience in software development",
+      date: "2019 - 2020",
+    },
+    {
+      id: 3,
+      title: "MEST Trainee",
+      description: "Studied web development at MEST",
+      date: "2024",
+    },
   ]);
-  const [newExperienceTitle, setNewExperienceTitle] = useState('');
-  const [newExperienceDescription, setNewExperienceDescription] = useState('');
-  const [newExperienceDate, setNewExperienceDate] = useState('');
+  const [newExperienceTitle, setNewExperienceTitle] = useState("");
+  const [newExperienceDescription, setNewExperienceDescription] = useState("");
+  const [newExperienceDate, setNewExperienceDate] = useState("");
 
   const handleEdit = (id) => {
     // Handle edit action here
@@ -21,7 +37,11 @@ const ExperiencesSection = () => {
   };
 
   const handleAddExperience = () => {
-    if (newExperienceTitle.trim() === '' || newExperienceDescription.trim() === '' || newExperienceDate.trim() === '') {
+    if (
+      newExperienceTitle.trim() === "" ||
+      newExperienceDescription.trim() === "" ||
+      newExperienceDate.trim() === ""
+    ) {
       return;
     }
 
@@ -33,13 +53,13 @@ const ExperiencesSection = () => {
     };
 
     setExperiences([...experiences, newExperience]);
-    setNewExperienceTitle('');
-    setNewExperienceDescription('');
-    setNewExperienceDate('');
+    setNewExperienceTitle("");
+    setNewExperienceDescription("");
+    setNewExperienceDate("");
   };
 
   return (
-    <section id='experiences' className="mt-8 max-w-5xl mx-auto">
+    <section id="experiences" className="mt-8 max-w-5xl mx-auto">
       <h2 className="text-xl font-bold mb-4">My Experiences</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {experiences.map((experience) => (
@@ -48,7 +68,12 @@ const ExperiencesSection = () => {
             className="bg-white p-4 border border-gray-200 rounded-lg flex flex-col items-start justify-between shadow hover:shadow-lg transition duration-300"
           >
             <div>
-              <h3 className="text-lg font-semibold">{experience.title}</h3>
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                {experience.title}
+              </h3>
               <p className="text-sm text-gray-600">{experience.description}</p>
               <p className="text-sm text-gray-600">Date: {experience.date}</p>
             </div>

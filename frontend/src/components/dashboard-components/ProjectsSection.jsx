@@ -1,41 +1,41 @@
-import  { useState } from 'react';
-import { FaTrash, FaEdit } from 'react-icons/fa';
+import { useState } from "react";
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: 'Project 1',
-      description: 'Description of Project 1',
-      imageUrl: 'https://via.placeholder.com/150',
-      liveDemoUrl: 'https://example.com',
-      repoUrl: 'https://github.com/example/project1',
+      title: "Project 1",
+      description: "Description of Project 1",
+      imageUrl: "https://via.placeholder.com/150",
+      liveDemoUrl: "https://example.com",
+      repoUrl: "https://github.com/example/project1",
     },
     {
       id: 2,
-      title: 'Project 2',
-      description: 'Description of Project 2',
-      imageUrl: 'https://via.placeholder.com/150',
-      liveDemoUrl: 'https://example.com',
-      repoUrl: 'https://github.com/example/project2',
+      title: "Project 2",
+      description: "Description of Project 2",
+      imageUrl: "https://via.placeholder.com/150",
+      liveDemoUrl: "https://example.com",
+      repoUrl: "https://github.com/example/project2",
     },
     {
       id: 3,
-      title: 'Project 3',
-      description: 'Description of Project 3',
-      imageUrl: 'https://via.placeholder.com/150',
-      liveDemoUrl: 'https://example.com',
-      repoUrl: 'https://github.com/example/project3',
+      title: "Project 3",
+      description: "Description of Project 3",
+      imageUrl: "https://via.placeholder.com/150",
+      liveDemoUrl: "https://example.com",
+      repoUrl: "https://github.com/example/project3",
     },
   ]);
 
   const [newProject, setNewProject] = useState({
-    id: '',
-    title: '',
-    description: '',
+    id: "",
+    title: "",
+    description: "",
     imageFile: null,
-    liveDemoUrl: '',
-    repoUrl: '',
+    liveDemoUrl: "",
+    repoUrl: "",
   });
 
   const handleInputChange = (e) => {
@@ -48,15 +48,18 @@ const ProjectsSection = () => {
   };
 
   const handleAddProject = () => {
-    const updatedProjects = [...projects, { ...newProject, id: projects.length + 1 }];
+    const updatedProjects = [
+      ...projects,
+      { ...newProject, id: projects.length + 1 },
+    ];
     setProjects(updatedProjects);
     setNewProject({
-      id: '',
-      title: '',
-      description: '',
+      id: "",
+      title: "",
+      description: "",
       imageFile: null,
-      liveDemoUrl: '',
-      repoUrl: '',
+      liveDemoUrl: "",
+      repoUrl: "",
     });
   };
 
@@ -70,7 +73,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id='projects' className="mt-8 max-w-5xl mx-auto">
+    <section id="projects" className="mt-8 max-w-5xl mx-auto">
       <h2 className="text-xl font-bold mb-4">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
@@ -79,10 +82,19 @@ const ProjectsSection = () => {
             className="bg-white p-4 border border-gray-200 rounded-lg flex flex-col items-start justify-between shadow hover:shadow-lg transition duration-300"
           >
             <div>
-              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                {project.title}
+              </h3>
               <p className="text-sm text-gray-600">{project.description}</p>
               <div className="mt-2">
-                <img src={project.imageUrl} alt={project.title} className="w-full h-auto rounded-lg" />
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-auto rounded-lg"
+                />
               </div>
             </div>
             <div className="mt-4 flex items-center">
