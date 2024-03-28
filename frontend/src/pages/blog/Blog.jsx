@@ -1,9 +1,4 @@
-import React from "react";
-import svgback from "../../assets/images/svgback.svg";
-import "./Blog.css";
-import blogimage from "../../assets/images/blogimg1.jpg";
-import featured from "../../assets/images/featured.jpg";
-import { Link } from "react-router-dom";
+
 
 const Blog = () => {
   return (
