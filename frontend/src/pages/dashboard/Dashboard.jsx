@@ -4,7 +4,7 @@ import ExperiencesSection from "../../components/dashboard-components/Experience
 import Header from "../../components/dashboard-components/Header";
 import OverviewAndInboxSection from "../../components/dashboard-components/OverviewAndInboxSection.jsx";
 import ProjectsSection from "../../components/dashboard-components/ProjectsSection.jsx";
-import Sidebar from "../../components/dashboard-components/Sidebar.jsx";
+import Sidebar from "../../components/dashboard-components/sidebar.jsx";
 import SkillsSection from "../../components/dashboard-components/SkillsSection.jsx";
 
 
