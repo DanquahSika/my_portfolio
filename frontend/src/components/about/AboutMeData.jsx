@@ -1,10 +1,10 @@
 export const aboutMeData = [
-    {
-        id: 1,
-        bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-    },
-    {
-        id: 2,
-        bio: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-    },
+  {
+    id: 1,
+    bio: "I am a passionate Full-Stack Developer with a keen eye for design. My journey in the world of technology for crafting elegant solutions that seamlessly blend functionality with aesthetics.As a Full-Stack Developer, I thrive on bringing ideas to life across the entire spectrum of web development. From conceptualizing user interfaces to architecting robust backend systems, I enjoy every aspect of the development process. Whether it's building intuitive user experiences or optimizing database performance, I'm driven by the pursuit of excellence in every line of code",
+  },
+  {
+    id: 2,
+    bio: "Versatile Skill Set: My expertise spans across front-end and back-end technologies, allowing me to tackle diverse challenges with confidence",
+  },
 ];
