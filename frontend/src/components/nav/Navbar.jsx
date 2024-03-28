@@ -17,7 +17,7 @@ const Navbar = () => {
   };
   return (
     <div className="bg-transparent m-0 p-0">
-      <div className="md:flex items-center justify-between">
+      <div className="md:flex items-center justify-evenly">
         <div className=" cursor-pointer">
           <span className="">
             <Link to="/">
