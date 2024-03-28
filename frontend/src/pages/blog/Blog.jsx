@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 import blogimage from "../../assets/images/blogimg1.jpg"
 const Blog = () => {
   return (
-    <div className="background relative h-full">
-      
-     
-      <div className="featured-blog relative">
+    <div className="background relative h-full">      <div className="featured-blog relative">
         <div className="image-blog">
           <img src={featured} alt="" />
         </div>
