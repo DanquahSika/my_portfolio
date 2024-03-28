@@ -6,7 +6,7 @@
   color: white;
   padding: 1rem;
 }
-
+/* 
 .svg-background {
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
+} */
 
 .content {
   position: relative;

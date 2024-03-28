@@ -22,7 +22,7 @@ const ServicesTab = () => {
         duration={500}
       >
         <div className="services-container">
-          <h3 className="text-center text-3xl mb-6 font-bold text-gray-800">
+          <h3 className="text-center text-3xl mb-6 font-bold text-ternary-light">
             My Skills
           </h3>
           <div className="services-grid">

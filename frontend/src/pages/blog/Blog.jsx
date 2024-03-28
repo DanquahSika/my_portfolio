@@ -1,14 +1,13 @@
-
-
+import React from "react";
+import svgback from "../../assets/images/svgback.svg"
+import featured from "../../assets/images/featured.jpg"
+import { Link } from "react-router-dom";
+import blogimage from "../../assets/images/blogimg1.jpg"
 const Blog = () => {
   return (
     <div className="background relative h-full">
-      <img src={svgback} alt="" className="svg-background" />
-      {/* <div className="content border-4 border-white mx-auto p-2 max-w-44">
-        <h1 className="text-2xl text-center font-bold text-white p-3">
-          Bech Blog
-        </h1>
-      </div> */}
+      
+     
       <div className="featured-blog relative">
         <div className="image-blog">
           <img src={featured} alt="" />
