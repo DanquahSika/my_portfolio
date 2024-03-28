@@ -21,7 +21,7 @@ const Home = () => {
       <ProjectsProvider>
         <ProjectsGrid></ProjectsGrid>
       </ProjectsProvider>
-
+      {/* 
       <div className="mt-8 sm:mt-10 flex justify-center">
         <Link
           to="/projects"
@@ -30,12 +30,11 @@ const Home = () => {
         >
           <Button title="More Projects" />
         </Link>
-      </div>
-      <About />
+      </div> */}
+      {/* <About /> */}
       <ServicesTab />
       <Counter />
 
-      <BlogTab />
       <Footer />
     </div>
   );
