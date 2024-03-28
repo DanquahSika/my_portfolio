@@ -1,28 +1,22 @@
 import React from "react";
 
-import { Link } from 'react-router-dom';
-import ProjectsGrid from '../../components/projects/ProjectsGrid';
-import { ProjectsProvider } from '../../components/projects/ProjectsContext';
-import Button from '../../components/reusable/Button';
+import { Link } from "react-router-dom";
+import ProjectsGrid from "../../components/projects/ProjectsGrid";
+import { ProjectsProvider } from "../../components/projects/ProjectsContext";
+import Button from "../../components/reusable/Button";
 
 import Hero from "../../components/hero/Hero";
 import Counter from "../../components/counter/Counter";
 import About from "../../components/about/About";
 import ServicesTab from "../../components/services-section/ServicesTab";
 
-import PortfolioTab from "../../components/portfolio-section/PortfolioTab";
 import BlogTab from "../../components/blog-section/BlogTab";
 import Footer from "../../components/footer/Footer";
-
-
-
-
 
 const Home = () => {
   return (
     <div className="container mx-auto">
       <Hero />
-     
 
       <ProjectsProvider>
         <ProjectsGrid></ProjectsGrid>
@@ -40,7 +34,7 @@ const Home = () => {
       <About />
       <ServicesTab />
       <Counter />
-      <PortfolioTab />
+
       <BlogTab />
       <Footer />
     </div>

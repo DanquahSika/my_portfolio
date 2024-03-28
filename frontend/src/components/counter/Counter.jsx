@@ -36,7 +36,7 @@ const AnimatedCounter = () => {
 
   return (
     <>
-      <section className="counters bg-blue-500 text-white py-12">
+      <section className="counters text-white py-12">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-center">
             <img src={project} alt="" className="w-32" />
@@ -48,7 +48,7 @@ const AnimatedCounter = () => {
           </div>
           <div className="flex flex-col items-center">
             {" "}
-            <img src={happy} alt=""className="w-32"  />
+            <img src={happy} alt="" className="w-32" />
             <i className="fab fa-twitter fa-4x mb-4 text-lightblue"></i>
             <div className="counter font-bold text-2xl" data-target="1500">
               0
@@ -56,7 +56,7 @@ const AnimatedCounter = () => {
             <h3 className="text-lg font-bold">Happy Clients</h3>
           </div>
           <div className="flex flex-col items-center">
-          <img  src={client} alt="" className="w-32"  />
+            <img src={client} alt="" className="w-32" />
             <i className="fab fa-facebook fa-4x mb-4 text-lightblue"></i>
             <div className="counter font-bold text-2xl" data-target="650">
               0
@@ -64,7 +64,7 @@ const AnimatedCounter = () => {
             <h3 className="text-lg font-bold">Client Refferals</h3>
           </div>
           <div className="flex flex-col items-center">
-             <img  src={years} alt="" className="w-32"  />
+            <img src={years} alt="" className="w-32" />
 
             <i className="fab fa-linkedin fa-4x mb-4 text-lightblue"></i>
             <div className="counter font-bold text-2xl" data-target="1825">
