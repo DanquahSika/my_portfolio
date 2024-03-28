@@ -31,11 +31,35 @@ const SkillsSection = () => {
     console.log(`Editing skill with id: ${id}`);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
+    try {
+      const query = { _id: new ObjectId(req.params.id) };
+      let result = await BLOGS_COLLECTION.deleteOne(query);
+      res.send(result).status(200);
+    } catch (error) {
+      console.error(error);
+    }
     setSkills(skills.filter((skill) => skill.id !== id));
   };
 
-  const handleAddSkill = () => {
+  const handleAddSkill = async () => {
+    const baseUrl = import.meta.env.VITE_API_URL;
+
+    try {
+      const response = await fetch(`${baseUrl}/skills`, {
+        method: "POST",
+        body: JSON.stringify({
+          skill: newSkillName,
+          proficiency: newSkillProficiency,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
     if (
       newSkillName.trim() === "" ||
       newSkillDescription.trim() === "" ||
@@ -100,7 +124,7 @@ const SkillsSection = () => {
             placeholder="Skill Name"
             value={newSkillName}
             onChange={(e) => setNewSkillName(e.target.value)}
-            className="border border-gray-300 p-2 mb-2 w-full"
+            className="border border-gray-300 p-2 mb-2 w-full text-black"
           />
           <input
             type="text"

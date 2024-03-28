@@ -7,35 +7,30 @@ import ProjectsSection from "../../components/dashboard-components/ProjectsSecti
 import Sidebar from "../../components/dashboard-components/sidebar.jsx";
 import SkillsSection from "../../components/dashboard-components/SkillsSection.jsx";
 
-
-
-
-
 const Dashboard = () => {
   return (
     <div className="flex h-screen">
       <Sidebar />
       <div className="flex-1">
-         <Header/>
+        <Header />
         <div className="p-6">
           <OverviewAndInboxSection />
         </div>
         <div className="p-6">
           <SkillsSection />
         </div>
-        <div className="p-6">
+        {/* <div className="p-6">
           <ProjectsSection />
-        </div>
+        </div> */}
         <div className="p-6">
           <AchievementsSection />
-          </div>
+        </div>
         <div className="p-6">
           <ExperiencesSection />
-          
         </div>
         <div className="p-6">
           <BlogSection />
-          </div>
+        </div>
       </div>
     </div>
   );

@@ -9,12 +9,6 @@ const AchievementsSection = () => {
       description: "Completed a course in web development from ABC Institute.",
       date: "2022-01-01",
     },
-    {
-      id: 2,
-      title: "First Place in Coding Competition",
-      description: "Won first place in a national coding competition.",
-      date: "2021-05-15",
-    },
   ]);
 
   const [newAchievement, setNewAchievement] = useState({
@@ -24,12 +18,12 @@ const AchievementsSection = () => {
     date: "",
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = async (e) => {
     const { name, value } = e.target;
     setNewAchievement({ ...newAchievement, [name]: value });
   };
 
-  const handleAddAchievement = () => {
+  const handleAddAchievement = async () => {
     const updatedAchievements = [
       ...achievements,
       { ...newAchievement, id: achievements.length + 1 },
@@ -41,6 +35,22 @@ const AchievementsSection = () => {
       description: "",
       date: "",
     });
+    const baseUrl = import.meta.env.VITE_API_URL;
+    try {
+      const response = await fetch(`${baseUrl}/achievement`, {
+        method: "POST",
+        body: JSON.stringify({
+          achievement: newAchievement.title,
+          description: newAchievement.description,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleEdit = (id) => {

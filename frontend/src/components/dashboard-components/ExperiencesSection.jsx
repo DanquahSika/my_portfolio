@@ -1,28 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTrash, FaEdit } from "react-icons/fa";
 
 const ExperiencesSection = () => {
-  const [experiences, setExperiences] = useState([
-    {
-      id: 1,
-      title: "Software Engineer",
-      description: "Worked on various web development projects",
-      date: "2020 - Present",
-    },
-    {
-      id: 2,
-      title: "Intern",
-      description:
-        "Interned at a tech company, gaining experience in software development",
-      date: "2019 - 2020",
-    },
-    {
-      id: 3,
-      title: "MEST Trainee",
-      description: "Studied web development at MEST",
-      date: "2024",
-    },
-  ]);
+  const [experiences, setExperiences] = useState([]);
+  const fetchExperience = async () => {
+    const baseUrl = import.meta.env.VITE_API_URL;
+    const response = await fetch(`${baseUrl}/experience`);
+    const info = await response.json();
+    setExperiences(info);
+  };
+  useEffect(() => {
+    fetchExperience();
+  }, []);
+
   const [newExperienceTitle, setNewExperienceTitle] = useState("");
   const [newExperienceDescription, setNewExperienceDescription] = useState("");
   const [newExperienceDate, setNewExperienceDate] = useState("");
@@ -36,7 +26,24 @@ const ExperiencesSection = () => {
     setExperiences(experiences.filter((experience) => experience.id !== id));
   };
 
-  const handleAddExperience = () => {
+  const handleAddExperience = async () => {
+    const baseUrl = import.meta.env.VITE_API_URL;
+    try {
+      const response = await fetch(`${baseUrl}/experience`, {
+        method: "POST",
+        body: JSON.stringify({
+          role: newExperienceTitle,
+          years: newExperienceDate,
+          organisation: newExperienceDescription,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
     if (
       newExperienceTitle.trim() === "" ||
       newExperienceDescription.trim() === "" ||
@@ -72,10 +79,12 @@ const ExperiencesSection = () => {
                 className="text-lg font-semibold"
                 style={{ color: "black", fontWeight: "bold" }}
               >
-                {experience.title}
+                {experience.role}
               </h3>
               <p className="text-sm text-gray-600">{experience.description}</p>
-              <p className="text-sm text-gray-600">Date: {experience.date}</p>
+              <p className="text-sm text-gray-600">
+                Years: {experience.years} years
+              </p>
             </div>
             <div className="mt-4 flex items-center">
               <button

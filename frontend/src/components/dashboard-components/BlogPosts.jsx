@@ -8,17 +8,6 @@ const BlogSection = () => {
       title: "First Blog Post",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
-    {
-      id: 2,
-      title: "Second Blog Post",
-      content:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-    },
-    {
-      id: 3,
-      title: "Third Blog Post",
-      content: "Integer eget odio sed ipsum finibus consequat.",
-    },
   ]);
   const [newPostTitle, setNewPostTitle] = useState("");
   const [newPostContent, setNewPostContent] = useState("");
