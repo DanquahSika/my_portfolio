@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 // import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-import { FiArrowDownCircle } from 'react-icons/fi';
-import developerLight from '../../assets/images/developer.svg';
-import { motion } from 'framer-motion';
+import { FiArrowDownCircle } from "react-icons/fi";
+import developerLight from "../../assets/images/developer.jpg";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   // const [activeTheme] = useThemeSwitcher();
@@ -11,7 +11,7 @@ const Hero = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+      transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
       className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2"
     >
       <div className="w-full md:w-1/3 text-left px-5">
@@ -19,11 +19,11 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            ease: 'easeInOut',
+            ease: "easeInOut",
             duration: 0.9,
             delay: 0.1,
           }}
-          className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
+          className="font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-primary-light uppercase"
         >
           Hi, I'm Bech
         </motion.h1>
@@ -31,7 +31,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            ease: 'easeInOut',
+            ease: "easeInOut",
             duration: 0.9,
             delay: 0.2,
           }}
@@ -43,7 +43,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            ease: 'easeInOut',
+            ease: "easeInOut",
             duration: 0.9,
             delay: 0.3,
           }}
@@ -67,16 +67,10 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
+        transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
         className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
       >
-        <img
-        className
-          src={
-            developerLight
-          }
-          alt="Developer" 
-        />
+        <img className="rounded-full" src={developerLight} alt="Developer" />
       </motion.div>
     </motion.section>
   );

@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+				<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-light">
 					Projects portfolio
 				</p>
 			</div>
@@ -26,8 +26,7 @@ const ProjectsGrid = () => {
 			<div className="mt-10 sm:mt-16">
 				<h3
 					className="font-general-regular 
-                        text-center text-secondary-dark
-                        dark:text-ternary-light
+                        text-center text-ternary-dark
                         text-md
                         sm:text-xl
                         mb-3

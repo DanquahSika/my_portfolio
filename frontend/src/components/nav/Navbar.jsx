@@ -5,11 +5,11 @@ import hamburgerIcon from "../../assets/images/hamburgercolored.svg";
 const Navbar = () => {
   let Links = [
     { name: "About", link: "/about" },
-    { name: "Services", link: "/services" },
+
     { name: "Contact", link: "/contact" },
     { name: "Portfolio", link: "/projects" },
     { name: "Blog", link: "/blog" },
-    { name: "Contact", link: "/contact" },
+    { name: "Dashboard", link: "/dashboard" },
   ];
   const [open, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
   };
   return (
     <div className="bg-transparent m-0 p-0">
-      <div className="md:flex items-center justify-between">
+      <div className="md:flex items-center justify-evenly">
         <div className=" cursor-pointer">
           <span className="">
             <Link to="/">

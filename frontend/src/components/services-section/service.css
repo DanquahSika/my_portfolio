@@ -1,0 +1,27 @@
+.services-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.serv1 {
+  flex-basis: calc(33% - 16px);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .serv1 {
+    flex-basis: 100%;
+  }
+}

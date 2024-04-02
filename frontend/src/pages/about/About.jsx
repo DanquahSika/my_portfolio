@@ -5,6 +5,7 @@ import AboutClients from '../../components/about/AboutClients';
 import { AboutMeProvider } from '../../components/about/AboutMeContext';
 import { motion } from 'framer-motion';
 
+
 const About = () => {
 	return (
 		<AboutMeProvider>

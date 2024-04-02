@@ -10,16 +10,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@material-tailwind/react": "^2.1.9",
+=======
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/lab": "^5.0.0-alpha.169",
+    "@mui/material": "^5.15.14",
+>>>>>>> 78ad501ca7af4ee7aba8d6287aabf4f1eb6e6b46
     "axios": "^1.6.8",
     "framer-motion": "^11.0.21",
+    "mxcn": "^2.0.0",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tw-elements-react": "^1.0.0-alpha2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
